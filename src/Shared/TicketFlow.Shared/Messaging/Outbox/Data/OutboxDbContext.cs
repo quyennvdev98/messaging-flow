@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TicketFlow.Shared.Messaging.Outbox.Data;
 
-public sealed class OutboxDbContext(DbContextOptions<OutboxDbContext> options) : DbContext(options)
+public class OutboxDbContext(DbContextOptions<OutboxDbContext> options) : DbContext(options)
 {
     public DbSet<OutboxMessage> OutboxMessages { get; set; }
 

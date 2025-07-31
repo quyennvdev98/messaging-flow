@@ -1,0 +1,6 @@
+//create migration for ticket schema
+dotnet ef migrations add Init -o .\Data\Migrations\Tickets --startup-project .\TicketFlow.Services.Tickets.Api\TicketFlow.Services.Tickets.Api.csproj --context TicketsDbContext --project .\TicketFlow.Services.Tickets.Core\TicketFlow.Services.Tickets.Core.csproj
+
+// Apply migration for Tickets schema
+dotnet ef database update --startup-project .\TicketFlow.Services.Tickets.Api\TicketFlow.Services.Tickets.Api.csproj --project .\TicketFlow.Services.Tickets.Core\TicketFlow.Services.Tickets.Core.csproj --context TicketsDbContext
+
